@@ -30,39 +30,37 @@
     <textarea id="info"></textarea>
 
     <form action="index.html" method="post">
-      <h1>Shirt Order Form</h1>
+      <h1>Trail Region Form</h1>
       <fieldset>
-      <label for="color">Shirt Color:</label>
-      <select id="color" name="shirt_color">
-        <optgroup label="Shirt Color">
-            <option value="red">Red</option>
-            <option value="yellow">Yellow</option>
-            <option value="purple">Purple</option>
-            <option value="blue">Blue</option>
-            <option value="green">Green</option>
-            <option value="orange">Orange</option>
+      <label for="trail">Trail Region:</label>
+      <select id="trail" name="trail_region">
+        <optgroup label="trail_region">
+            <option value="Paul Yost">Paul Yost</option>
+            <option value="Scott's Gap">Scott's Gap</option>
+            <option value="Welcome Center">Welcome Center</option>
+            <option value="Horine Reservation">Horine Reservation</option>
         </optgroup>
     </select><br>
     </fieldset>
     <fieldset>
-    <label>Shirt Size:</label><br>
-        <input type="radio" id="small" value="small" name="shirt_size">
-            <label for="small">Small</label><br>
-        <input type="radio" id="medium" value="medium" name="shirt_size">
-            <label for="medium">Medium</label><br>
-        <input type="radio" id="large" value="large" name="shirt_size">
-            <label for="large">Large</label><br>
-            <input type="radio" id="x-large" value="lx-arge" name="shirt_size">
-                <label for="x-large">X-Large</label><br>
+    <label>Trail Difficulty:</label><br>
+        <input type="radio" id="easy" value="easy" name="trail_region">
+            <label for="easy">Easy</label><br>
+        <input type="radio" id="moderate" value="moderate" name="trail_region">
+            <label for="moderate">Moderate</label><br>
+        <input type="radio" id="difficult" value="difficult" name="trail_region">
+            <label for="difficult">Difficult</label><br>
+            <input type="radio" id="strenuous" value="strenuous" name="trail_region">
+                <label for="strenuous">Strenuous</label><br>
         </fieldset>
 
         <fieldset>
-        <input type="checkbox" id="shipping" value="fast_shipping">
-            <label for="shipping">Fast Shipping</label><br>
-        <input type="checkbox" id="newsletter" value="subscribe">
-            <label for="newsletter">Subscribe to Newsletter</label><br>
+        <input type="checkbox" id="trails" value="trail_list">
+            <label for="trails">List all Trails in Region</label><br>
+        <input type="checkbox" id="newsletter" value="trail_difficulty">
+            <label for="newsletter">List all Trails in selected difficulty</label><br>
         </fieldset>
-        <button type="submit">Place Order</button><br>
+        <button type="submit">Go</button><br>
     </form>
 
   </body>
