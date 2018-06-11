@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+  </head>
+  <link rel="stylesheet" href="styles.css">
+  <a href="https://louisvilleky.gov/government/jefferson-memorial-forest"><h1>Jefferson Memorial Forest</h1></a>
+  <body>
+        <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+              </div>
+        <a href="https://louisvilleky.gov/government/jefferson-memorial-forest">
+            <img class="header" src="https://louisvilleky.gov/sites/default/files/jefferson_memorial_forest/header_images/jmf-header_0.jpg" with="50%" alt="What The F*%#" title="What The F*%#" align="middle">
+                 </a>
+    <p>This is a paragraph.</p>
+
+    <!-- <div class="container">
+            <img src="notebook.jpg" alt="Notebook" style="width:100%;">
+            <div class="content">
+              <h1>Heading</h1>
+              <p>Lorem ipsum..</p>
+            </div>
+          </div> -->
+          
+    <label for="info">Tell us about yourself:</label><br>
+    <textarea id="info"></textarea>
+
+    <form action="index.html" method="post">
+      <h1>Shirt Order Form</h1>
+      <fieldset>
+      <label for="color">Shirt Color:</label>
+      <select id="color" name="shirt_color">
+        <optgroup label="Shirt Color">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+        </optgroup>
+    </select><br>
+    </fieldset>
+    <fieldset>
+    <label>Shirt Size:</label><br>
+        <input type="radio" id="small" value="small" name="shirt_size">
+            <label for="small">Small</label><br>
+        <input type="radio" id="medium" value="medium" name="shirt_size">
+            <label for="medium">Medium</label><br>
+        <input type="radio" id="large" value="large" name="shirt_size">
+            <label for="large">Large</label><br>
+            <input type="radio" id="x-large" value="lx-arge" name="shirt_size">
+                <label for="x-large">X-Large</label><br>
+        </fieldset>
+
+        <fieldset>
+        <input type="checkbox" id="shipping" value="fast_shipping">
+            <label for="shipping">Fast Shipping</label><br>
+        <input type="checkbox" id="newsletter" value="subscribe">
+            <label for="newsletter">Subscribe to Newsletter</label><br>
+        </fieldset>
+        <button type="submit">Place Order</button><br>
+    </form>
+
+  </body>
+</html>
