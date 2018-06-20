@@ -1,4 +1,5 @@
 body {
+    line-height: 1.6; 
     background-color: rgb(191, 230, 176);
 }
 h1{
@@ -54,12 +55,23 @@ li a {
     color: white;
 }
 
+/* --- Layout Containers ---*/
+
+.wrapper{    
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-header{
+    background: #3acec2;
+    padding: 1em 0;
+}
 
 /*Below is Commented out in html*/
 .container {
     position: relative; 
     max-width: 800px; /* Maximum width */
-    margin: 0 auto; /* Center it */
+    margin: left; /* Center it */
 
 }
 
