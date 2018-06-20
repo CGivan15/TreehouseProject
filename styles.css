@@ -71,7 +71,7 @@ li a {
 .container {
     position: relative; 
     max-width: 800px; /* Maximum width */
-    margin: left; /* Center it */
+    margin: left; 
 
 }
 
@@ -84,3 +84,21 @@ li a {
     padding: 20px; /* Some padding */
 }
 /*Above is Commented out in html*/
+
+/*---Media Queries ---*/
+@media (min-width: 769px) {
+.wrap {
+    min-height: calc(100vh - 89px);
+}
+.container{
+    width: 40%;
+    max-width: 1000px;
+    margin: Left;
+}
+}
+
+.main-footer{
+    background: #3acec2;
+    padding: 1em 0;
+    margin: 0 auto; /* Center it */
+}
