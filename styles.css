@@ -85,6 +85,20 @@ li a {
 }
 /*Above is Commented out in html*/
 
+button {
+    background:    #c00;
+    background:    -webkit-linear-gradient(#c00, #600);
+    background:    linear-gradient(#c00, #600);
+    border-radius: 999px;
+    color:         #f6f4f4;
+    padding:       10px 100px;
+    font:          normal 700 24px/1 "Open Sans", sans-serif;
+    text-align:    center;
+    text-shadow:   1px 1px 0 #000;
+    /* margin-left: 80px; */
+    margin-top:10px;
+  }
+
 /*---Media Queries ---*/
 @media (min-width: 769px) {
 .wrap {
@@ -97,13 +111,15 @@ li a {
 }
 }
 
-.main-footer{
+.main-footer {
     background: #3acec2;
     padding: 1em 0;
-    position: fixed;
+    /* height: 50px; */
+    position: fixed; 
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
+    margin-top: -50px;
 }
