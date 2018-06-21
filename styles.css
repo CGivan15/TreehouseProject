@@ -100,5 +100,10 @@ li a {
 .main-footer{
     background: #3acec2;
     padding: 1em 0;
-    margin: 0 auto; /* Center it */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
