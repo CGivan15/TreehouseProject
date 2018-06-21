@@ -97,13 +97,15 @@ li a {
 }
 }
 
-.main-footer{
+.main-footer {
     background: #3acec2;
     padding: 1em 0;
-    position: fixed;
+    /* height: 50px; */
+    position: fixed; 
     left: 0;
     bottom: 0;
     width: 100%;
     color: white;
     text-align: center;
+    margin-top: -50px;
 }
