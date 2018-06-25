@@ -31,6 +31,7 @@ li a {
 .topnav {
     background-color: #333;
     overflow: hidden;
+    width: 95%;
 }
 
 /* Style the links inside the navigation bar */
