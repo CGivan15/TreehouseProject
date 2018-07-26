@@ -1,86 +1,133 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Forms</title>
-  </head>
-  <body>
-      <div class="wrap">
-    <div class="wrapper">
-    <!-- <header class="main-header"> -->
-        <link rel="stylesheet" href="normalize.css">
-        <link rel="stylesheet" href="styles.css">
-        <a href="https://louisvilleky.gov/government/jefferson-memorial-forest"><h1>Jefferson Memorial Forest</h1></a>
-    <!-- </header> -->
-        <div class="topnav">
-                <a class="active" href="#home">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-        </div>
-            <a href="https://louisvilleky.gov/government/jefferson-memorial-forest">
-                <img class="header" src="https://louisvilleky.gov/sites/default/files/jefferson_memorial_forest/header_images/jmf-header_0.jpg" width="100%" alt="Jefferson Memorial Forest" title="Jefferson Memorial Forest" align="middle">
-            </a>
-    <div class="primary col">
-        <h2>Welcome!</h2>
-        <p>Jefferson Memorial Forest has trails for every skill level.  Use the form below to find your preferred trail.</p>
-    </div>
-    <div class="secondary col">
-    <h2>Other Stuff!</h2>
-    <p>There are plenty of activities besides hiking at JMF.  We have picnic areas and zip lines!  Find your happy place here.</p>
-    </div>
-    <div class="container">
-            <img src="https://pbs.twimg.com/profile_images/563576709597765632/8RFCEGZx_400x400.jpeg" alt="Picture" title="This Guy!" style="width:40%;">
-            <!-- <div class="content"> -->
-              <!-- <h1>Heading</h1>
-              <p>I look good.</p> -->
-            <!-- </div> -->
-          </div>
-    
-        <form>
-            <label for="info">Tell us about your trail experience.</label><br>
-            <textarea id="info"></textarea><br>
-            <button type="submit">Send</button><br>
-        </form>
-        <form action="index.html" method="post">
-        <h1>Trail Region Form</h1>
-        <fieldset>
-            <label for="trail">Forest Region:</label>
-            <select id="trail" name="trail_region">
-                <optgroup label="Trail Region">
-                    <option value="Paul Yost">Paul Yost</option>
-                    <option value="Scott's Gap">Scott's Gap</option>
-                    <option value="Welcome Center">Welcome Center</option>
-                    <option value="Horine Reservation">Horine Reservation</option>
-                </optgroup>
-            </select><br>
-        </fieldset>
-        <fieldset>
-            <label>Trail Difficulty:</label><br>
-            <input type="radio" id="easy" value="easy" name="trail_region">
-                <label for="easy">Easy</label><br>
-            <input type="radio" id="moderate" value="moderate" name="trail_region">
-                <label for="moderate">Moderate</label><br>
-            <input type="radio" id="difficult" value="difficult" name="trail_region">
-                <label for="difficult">Difficult</label><br>
-            <input type="radio" id="strenuous" value="strenuous" name="trail_region">
-                <label for="strenuous">Strenuous</label><br>
-        </fieldset>
-
-        <fieldset>
-            <input type="checkbox" id="trails" value="trail_list">
-                <label for="trails">List all Trails in Region</label><br>
-            <input type="checkbox" id="newsletter" value="trail_difficulty">
-                <label for="newsletter">List all Trails in selected difficulty</label><br>
-        </fieldset>
+    <head>
+        <meta charset="utf-8">
+        <title>JMF Trail Finder</title>
+    </head>
+    <body onload="appear(document.getElementsByTagName('img')[0], 0, 5, 200); appear(document.getElementsByTagName('h1')[0], 0, 5, 200);">
         <div class="wrap">
-            <button type="submit">Go</button><br>
+            <div class="wrapper">
+
+                <!-- CSS links -->
+                <link rel="stylesheet" href="styles.css">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+                <!-- Heading -->
+                <h1 id="myHeading" class="myHeading">Jefferson Memorial Forest Trail Finder</h1>
+
+                <!-- Navigation Bar -->
+                <div class="topnav" id="myTopnav">
+                    <a class="menuItem" href="#home">Home</a>
+                    <a class="menuItem" href="#news">News</a>
+                    <a class="menuItem" href="#about">About</a>
+                    <a class="menuItem" href="#contact">Contact</a>
+                    <a class="menuItem" href="#headingColor" id="myButton">Change Heading Color</a>
+                    <a class="menuItem" onclick="pageReload()">Refresh Page</a>
+                        <a href="javascript:void(0);" class="icon" onclick="myMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                </div>
+                    <!-- link to official forest website when image is clicked-->
+                    <a href="https://louisvilleky.gov/government/jefferson-memorial-forest">
+                        <img class="main-header" src="https://louisvilleky.gov/sites/default/files/jefferson_memorial_forest/header_images/jmf-header_0.jpg" width="100%" alt="Jefferson Memorial Forest" title="Jefferson Memorial Forest" align="middle">
+                    <!-- <script>appear(document.getElementsByTagName('img1')[0], 0, 5, 400);</script> -->
+                    </a>
+
+                <!-- Columns -->
+                <div class="row">
+                    <div id = "news" class="primary col">
+                        <h2>Welcome!</h2>
+                        <p>Jefferson Memorial Forest has trails for every skill level.  Use the form below to find your preferred trail.  Be prepared on the trails.  Take plenty of water.  Tick season is in full bloom, so don't forget your repellent.</p>
+                    </div>
+                    <div class="secondary col">
+                        <h2>Other Stuff!</h2>
+                        <p>There are plenty of activities besides hiking at Jefferson Memorial Forest.  We also have picnic areas, playgrounds, camping, and zip lines.  Find your happy place here.</p>
+                    </div>
+                </div>
+                
+                <!-- Picture -->
+                <div class="container">
+                    <img src="https://pbs.twimg.com/profile_images/563576709597765632/8RFCEGZx_400x400.jpeg"  class="imgTranspose imgSize" alt="Picture" title="This Guy!">
+                <figcaption>This guy thinks you should go outside and play.</figcaption>
+                </div>
+            
+                <!-- comment section -->
+                <form id="about">
+                    <label for="info"><font color="blue">We love to hear from our nature enthusiasts. Tell us about your trail experience.</font></label><br>
+                    <textarea id="info"></textarea><br>
+
+                    <!-- Comment submit button -->
+                    <button type="submit" onclick="alertAbout()">Submit Comment</button><br>
+                </form>
+
+                <!-- Trail form -->
+                <form action="index.html" method="post">
+                    <h1>Trail Region Form</h1>
+                    <!-- region section of trail form -->
+                    <fieldset>
+                        <label for="trail">Forest Region:</label>
+                        <select id="trail" name="trail_region">
+                            <optgroup label="Trail Region">
+                                <option value="All Regions">All Regions</option>
+                                <option value="Paul Yost">Paul Yost</option>
+                                <option value="Scott's Gap">Scott's Gap</option>
+                                <option value="Welcome Center">Welcome Center</option>
+                                <option value="Horine Reservation">Horine Reservation</option>
+                            </optgroup>
+                        </select><br>
+                    </fieldset>
+                    <fieldset>
+                        <!-- difficulty section of trail form -->
+                        <label>Trail Difficulty:</label><br>
+                        <input type="radio" id="any" value="any" name="trail_region">
+                            <label for="any">Any Level</label><br>
+                        <input type="radio" id="easy" value="easy" name="trail_region">
+                            <label for="easy">Easy</label><br>
+                        <input type="radio" id="moderate" value="moderate" name="trail_region">
+                            <label for="moderate">Moderate</label><br>
+                        <input type="radio" id="difficult" value="difficult" name="trail_region">
+                            <label for="difficult">Difficult</label><br>
+                        <input type="radio" id="strenuous" value="strenuous" name="trail_region">
+                            <label for="strenuous">Strenuous</label><br>
+                    </fieldset>
+
+                    <!-- Form Submit Button -->
+                    <button type="submit" onclick="alertTrailRegion()">List Trails</button><br>
+
+                    <!-- Contact Information -->
+                    <article class="address" id="contact">
+                        <h3>Contact</h3>
+                        <address>
+                            Jefferson Memorial Forest<br>
+                            (502) 368-5404<br>
+                            11311 Mitchell Hill Road<br>
+                            Fairdale, KY 40118     
+                        </address>
+                    </article>
+
+                </form>
+            </div>
         </div>
-        </form>
-        </div>
-        </div>
+
+        <!-- Footer -->
         <footer class="main-footer">
-            <span>&copy;2018 Trails in Jefferson Memorial Forest.</span>
+            <span>&copy;2018 Trails in Jefferson Memorial Forest</span>
         </footer>
-  </body>
+
+            <!-- functions -->
+            <script>
+                function pageReload(){
+                    location.reload();
+                }
+                function alertAbout(){
+                    alert("Thank you for your input.");
+                }
+                function alertTrailRegion(){
+                    alert("Form Incomplete: This will bring up a list of trails to meet your specifications.");
+                }
+            </script>
+
+        <!-- javascript link -->
+        <script src="javascript.js"></script>
+    </body>
 </html>
